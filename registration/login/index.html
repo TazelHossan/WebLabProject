@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Our School | All in One Platform</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h1>Login</h1>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    
+    <p id="user_para">You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDPxzRphQsg1OGwCmkfBSAvTSUMo5ulptA",
+    authDomain: "myproject1-8ea79.firebaseapp.com",
+    projectId: "myproject1-8ea79",
+    storageBucket: "myproject1-8ea79.appspot.com",
+    messagingSenderId: "434184118827",
+    appId: "1:434184118827:web:9c751a5ba5c7fead2a406e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
