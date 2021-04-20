@@ -50,7 +50,46 @@
 	<div class="double-bounce1"></div>
 	<div class="double-bounce2"></div>
 	</div>
-</div><!-- Document Wrapper
+</div>
+	
+	
+<!-- Cookie -->
+ <div class="cookies">
+    <img src="#" alt="">
+    <div class="content">
+      
+      <p>This website use cookies to ensure you get the best experience on our website.</p>
+      <div class="buttons">
+        <button class="item">I understand</button>
+        <a href="https://www.kaspersky.com/resource-center/definitions/cookies" class="item">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cookieBox = document.querySelector(".cookies"),
+    acceptBtn = cookieBox.querySelector("button");
+
+    acceptBtn.onclick = ()=>{
+      //setting cookie for 1 month, after one month it'll be expired automatically
+      document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+      if(document.cookie){ //if cookie is set
+        cookieBox.classList.add("hide"); //hide cookie box
+      }else{ //if cookie not set then alert an error
+	  cookieBox.classList.add("hide"); //hide cookie box
+        //alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+      }
+    }
+    let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+    //if cookie is set then hide the cookie box else show it
+    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+  </script>
+
+<!-- End Cookie-->
+	
+	
+	
+	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper" class="wrapper clearfix">
 <header id="navbar-spy" class="header header-1">
