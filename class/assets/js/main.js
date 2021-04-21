@@ -53,8 +53,8 @@ function saveMessage(name, email,userpassword){
   newMessageRef.set({
     name: name,
     
-    email:email,
-    userpassword:userpassword
+    subject:email,
+    message:userpassword
   
   });
 }
